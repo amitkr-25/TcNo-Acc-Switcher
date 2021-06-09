@@ -21,12 +21,21 @@
 @inject IJSRuntime _jsRuntime
 @{ AppData.SetActiveIJsRuntime(_jsRuntime); }
 
+@inject IStringLocalizer<App> _locale
+
+@if (true)
+{
+    <div class="updateBar">
+        <span>@_locale["update"]</span>
+    </div>
+}
+
 <div class="container mainblock">
     <div class="row">
         <div class="col-md-12 col-lg-9 col-xl-8 mx-auto settingsCol">
             <div class="toastarea"></div>
             <SharedSettings />
-            
+
             @if (_appSett.DisabledPlatforms.Count > 0)
             {
                 <div class="SettingsHeader">

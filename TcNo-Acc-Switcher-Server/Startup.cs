@@ -13,11 +13,16 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 using System;
+using System.Globalization;
+using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.Logging.Abstractions;
+using Microsoft.Extensions.Options;
 using TcNo_Acc_Switcher_Globals;
 using TcNo_Acc_Switcher_Server.Data;
 
@@ -38,8 +43,10 @@ namespace TcNo_Acc_Switcher_Server
         {
             // Crash handler
             AppDomain.CurrentDomain.UnhandledException += Globals.CurrentDomain_UnhandledException;
+            services.AddControllers();
+            services.AddLocalization(x => { x.ResourcesPath = "Resources"; });
             services.AddRazorPages();
-            services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
+            services.AddServerSideBlazor().AddCircuitOptions(x => { x.DetailedErrors = true; });
             // Persistent settings:
             services.AddSingleton<AppSettings>(); // App Settings
             services.AddSingleton<AppData>(); // App Data
@@ -49,6 +56,32 @@ namespace TcNo_Acc_Switcher_Server
             services.AddSingleton<Data.Settings.Riot>(); // Riot Games
             services.AddSingleton<Data.Settings.Steam>(); // Steam
             services.AddSingleton<Data.Settings.Ubisoft>(); // Ubisoft
+
+
+            var options = Options.Create(new LocalizationOptions { ResourcesPath = "Resources" });
+            var factory = new Net5ResourceManagerStringLocalizerFactory(options, NullLoggerFactory.Instance);// Use the implementation from aspnet/Extensions master
+
+            CultureInfo.CurrentUICulture = new CultureInfo("en");
+            var valuesLoc = factory.Create(typeof(Program));
+            Console.WriteLine(valuesLoc["update"]); // Expected: "EnglishValue"
+
+            CultureInfo.CurrentUICulture = new CultureInfo("fr");
+            Console.WriteLine(valuesLoc["update"]); // Expected: "FrenchValue"
+
+        }
+
+        private RequestLocalizationOptions GetLocalisationOptions()
+        {
+            var cultures = Configuration.GetSection("Cultures")
+                .GetChildren().ToDictionary(x => x.Key, x => x.Value);
+
+            var supportedCultures = cultures.Keys.ToArray();
+
+            var localisationOptions = new RequestLocalizationOptions()
+                .AddSupportedCultures(supportedCultures)
+                .AddSupportedUICultures(supportedCultures);
+
+            return localisationOptions;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,10 +98,13 @@ namespace TcNo_Acc_Switcher_Server
 
             app.UseStaticFiles();
 
+            app.UseRequestLocalization(GetLocalisationOptions());
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapDefaultControllerRoute();
 
                 endpoints.MapBlazorHub();
