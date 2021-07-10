@@ -1,6 +1,6 @@
 ;TcNo Account Switcher
 ;Wesley Pyburn (TechNobo)
-;https://github.com/TcNobo/TcNo-Acc-Switcher
+;https://github.com/TcNobo/TcNo_Acc_Switcher
 
 ;--------------------------------
 ;Include Modern UI
@@ -18,7 +18,7 @@
 !define COPYRIGHT "TechNobo (Wesley Pyburn) (C) 2021"
 !define DESCRIPTION "TcNo Account Switcher"
 !define LICENSE_TXT "..\..\LICENSE"
-!define MAIN_APP_EXE "TcNo-Acc-Switcher.exe"
+!define MAIN_APP_EXE "TcNo_Acc_Switcher.exe"
 !define INSTALL_TYPE "SetShellVarContext current"
 !define REG_ROOT "HKCU"
 !define REG_APP_PATH "Software\Microsoft\Windows\CurrentVersion\App Paths\${MAIN_APP_EXE}"
@@ -42,7 +42,7 @@ VIAddVersionKey "FileVersion"  "${VERSION}"
 
 !define INSTALLER_NAME "TcNo Account Switcher - Installer.exe"
 
-!define INSTALLER_7Z "..\..\TcNo-Acc-Switcher-Client\bin\x64\Release\TcNo-Acc-Switcher.7z"
+!define INSTALLER_7Z "..\..\TcNo_Acc_Switcher_Client\bin\x64\Release\TcNo_Acc_Switcher.7z"
 
 !define INSTALL_DIR "$PROGRAMFILES64\TcNo Account Switcher"
 ;;;;!define INSTALL_DIR "$PROGRAMFILES\TcNo Account Switcher"
@@ -81,7 +81,7 @@ InstallDir "${INSTALL_DIR}"
   !define MUI_TEXTCOLOR FFFFFF
   !define MUI_INSTFILESPAGE_COLORS "FFFFFF 1F212D"
   !define MUI_FINISHPAGE_LINK_COLOR FFAA00
-  !define UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\TcNo-Acc-Switcher"
+  !define UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\TcNo_Acc_Switcher"
 
 ;--------------------------------
 ;Pages
@@ -106,8 +106,8 @@ InstallDir "${INSTALL_DIR}"
   ; Finish page
   !define MUI_FINISHPAGE_NOAUTOCLOSE
   !define MUI_UNFINISHPAGE_NOAUTOCLOSE
-  !define MUI_FINISHPAGE_LINK "https://github.com/TcNobo/TcNo-Acc-Switcher"
-  !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/TcNobo/TcNo-Acc-Switcher"
+  !define MUI_FINISHPAGE_LINK "https://github.com/TcNobo/TcNo_Acc_Switcher"
+  !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/TcNobo/TcNo_Acc_Switcher"
 
   !insertmacro MUI_PAGE_FINISH
 
@@ -131,8 +131,8 @@ Section "Main files" InstSec
   SetDetailsPrint listonly
   File "${INSTALLER_7Z}"
   SetCompress auto
-  Nsis7z::ExtractWithDetails "$INSTDIR\TcNo-Acc-Switcher.7z" "Decompressing %s..."
-  Delete "$OUTDIR\TcNo-Acc-Switcher.7z"  
+  Nsis7z::ExtractWithDetails "$INSTDIR\TcNo_Acc_Switcher.7z" "Decompressing %s..."
+  Delete "$OUTDIR\TcNo_Acc_Switcher.7z"  
   
   ;Store installation folder
   WriteRegStr "${REG_ROOT}" "${REG_APP_PATH}" "" $INSTDIR

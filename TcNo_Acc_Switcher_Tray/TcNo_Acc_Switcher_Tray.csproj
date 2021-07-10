@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>TcNo_Acc_Switcher_Tray</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <Authors>TechNobo (Wesley Pyburn)</Authors>
+    <Product>TcNo Account Switcher</Product>
+    <Copyright>Copyright © TechNobo (Wesley Pyburn) 2019-2021</Copyright>
+    <PackageProjectUrl>https://github.com/TcNobo/TcNo_Acc_Switcher</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TcNobo/TcNo_Acc_Switcher</RepositoryUrl>
+    <PackageIcon>TcNoAccSw-Icon-100x100.png</PackageIcon>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Users\TCNO\source\repos\TcNo_Acc_Switcher\TcNo_Acc_Switcher_Client\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TcNo_Acc_Switcher_Globals\TcNo_Acc_Switcher_Globals.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\TcNo_Acc_Switcher_Server\wwwroot\img\TcNoAccSw-Icon-100x100.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

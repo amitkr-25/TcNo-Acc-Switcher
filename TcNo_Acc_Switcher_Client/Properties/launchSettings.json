@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TcNo_Acc_Switcher_Client": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false,
+      "remoteDebugMachine": "",
+      "authenticationMode": "Windows"
+    }
+  }
+}

@@ -36,7 +36,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\TcNo-Acc-Switcher-Tray\favicon.ico">
+    <Image Include="..\TcNo_Acc_Switcher_Tray\favicon.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

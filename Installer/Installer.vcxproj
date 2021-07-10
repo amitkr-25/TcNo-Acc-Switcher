@@ -87,7 +87,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)\TcNo-Acc-Switcher-Client\bin\Installer\</OutDir>
+    <OutDir>$(SolutionDir)\TcNo_Acc_Switcher_Client\bin\Installer\</OutDir>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <VcpkgUseStatic>true</VcpkgUseStatic>
@@ -178,7 +178,7 @@
     <ResourceCompile Include="Installer.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\TcNo-Acc-Switcher-Tray\favicon.ico" />
+    <Image Include="..\TcNo_Acc_Switcher_Tray\favicon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

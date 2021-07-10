@@ -3,20 +3,20 @@
     <img src="/other/img/Banner.png"></a>
 </p>
 <p align="center">
-  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/TcNobo/TcNo-Acc-Switcher/total?logo=GitHub&style=flat-square">
+  <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/TcNobo/TcNo_Acc_Switcher/total?logo=GitHub&style=flat-square">
   <a href="https://tcno.co/">
     <img alt="Website" src="/other/img/web.svg" height=20"></a>
   <a href="https://s.tcno.co/AccSwitcherDiscord">
     <img alt="Discord server" src="https://img.shields.io/discord/217649733915770880?label=Discord&logo=discord&style=flat-square"></a>
   <a href="https://twitter.com/TcNobo">
     <img alt="Twitter" src="https://img.shields.io/twitter/follow/TcNobo?label=Follow%20%40TcNobo&logo=Twitter&style=flat-square"></a>
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TcNobo/TcNo-Acc-Switcher?logo=GitHub&style=flat-square">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/TcNobo/TcNo-Acc-Switcher?logo=GitHub&style=flat-square">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/TcNobo/TcNo_Acc_Switcher?logo=GitHub&style=flat-square">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/TcNobo/TcNo_Acc_Switcher?logo=GitHub&style=flat-square">
 </p>
                                                                                                                                   
-<p align="center"><a target="_blank" href="https://github.com/TcNobo/TcNo-Acc-Switcher/releases/latest">
+<p align="center"><a target="_blank" href="https://github.com/TcNobo/TcNo_Acc_Switcher/releases/latest">
   <img alt="Download latest" src="/other/img/DownloadLatestNEW.png" height=70"></a>
-  <a target="_blank" href="https://github.com/TcNobo/TcNo-Acc-Switcher/wiki">
+  <a target="_blank" href="https://github.com/TcNobo/TcNo_Acc_Switcher/wiki">
   <img alt="More info" src="/other/img/WikiButton.png" height=70"></a>
 </p>
   
@@ -40,15 +40,15 @@ The new version is now out of beta! Please report any and all bugs, as well as s
 -   **Automatic updates** WAY smaller updates, due to using a new Patch system. No more redownloading the entire app. Only a few KB/MB at a time.
 -  **Steam: Log in as Invisible, Offline and more!** Copy profile links, SteamID and create quick-switch desktop shortcuts!
 
-\[For info on how any of these work, see the [Wiki](https://github.com/TcNobo/TcNo-Acc-Switcher/wiki)]
+\[For info on how any of these work, see the [Wiki](https://github.com/TcNobo/TcNo_Acc_Switcher/wiki)]
 
 
 ## Required runtimes:
 **If you use the installer:** The required runtimes will automatically be downloaded and installed.
 **If you are NOT using the installer:** Run `_FIRST_RUN.exe` on a computer to bring up the same window as in the installer, where runtimes are downloaded and installed.
-**For manual runtime download and install**, see the [Wiki on this GitHub](https://github.com/TcNobo/TcNo-Acc-Switcher/wiki#1-installing-required-runtimes)
+**For manual runtime download and install**, see the [Wiki on this GitHub](https://github.com/TcNobo/TcNo_Acc_Switcher/wiki#1-installing-required-runtimes)
 
-### Visit the [Wiki](https://github.com/TcNobo/TcNo-Acc-Switcher/wiki) for more info and steps for your first launch.
+### Visit the [Wiki](https://github.com/TcNobo/TcNo_Acc_Switcher/wiki) for more info and steps for your first launch.
 
 ## Installation:
 #### Install Guide
@@ -60,11 +60,11 @@ The new version is now out of beta! Please report any and all bugs, as well as s
     
 1. Download `TcNo.Account.Switcher.Installer...exe`
 2. Run the installer, and the application should launch when done. If not:
-Head into the folder where you installed the program and run `_FIRST_RUN.exe` to make sure required runtimes are installed, and then run `TcNo-Acc-Switcher.exe` to run the main program. The second is what shortcuts to the program should point to.
+Head into the folder where you installed the program and run `_FIRST_RUN.exe` to make sure required runtimes are installed, and then run `TcNo_Acc_Switcher.exe` to run the main program. The second is what shortcuts to the program should point to.
 
-**For a portable installation (eg. on a USB) see [THIS](https://github.com/TcNobo/TcNo-Acc-Switcher/wiki#portable-eg-for-usb)** for steps on using the `.zip` or `.7z` below.
+**For a portable installation (eg. on a USB) see [THIS](https://github.com/TcNobo/TcNo_Acc_Switcher/wiki#portable-eg-for-usb)** for steps on using the `.zip` or `.7z` below.
 
-[See more info HERE](https://github.com/TcNobo/TcNo-Acc-Switcher/wiki#2-running-the-tcno-account-switcher)
+[See more info HERE](https://github.com/TcNobo/TcNo_Acc_Switcher/wiki#2-running-the-tcno-account-switcher)
 
 ## Screenshots
 
@@ -83,12 +83,12 @@ Head into the folder where you installed the program and run `_FIRST_RUN.exe` to
 
 ## LEGACY STEAM ONLY VERSION
 
-[This](https://github.com/TcNobo/TcNo-Acc-Switcher/releases/tag/3.0.02) is then final release of the Steam only legacy version. You'll also need the .NET Framework 4.8 Runtime, below. Microsoft .NET Framework 4.8 Runtime: [Web Installer](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-web-installer), [Offline Installer](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-offline-installer), [Other languages](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+[This](https://github.com/TcNobo/TcNo_Acc_Switcher/releases/tag/3.0.02) is then final release of the Steam only legacy version. You'll also need the .NET Framework 4.8 Runtime, below. Microsoft .NET Framework 4.8 Runtime: [Web Installer](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-web-installer), [Offline Installer](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-offline-installer), [Other languages](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 **Screenshots:** [imgur library](https://imgur.com/prhdlks)
 
 **Running the program:**
-After installing using the installer, or downloading your .zip (portable version) from the [GitHub Releases](https://github.com/TcNobo/TcNo-Acc-Switcher/releases/tag/3.0.02) page, extract everything to a folder of your choice and run `TcNo Account Switcher.exe`
+After installing using the installer, or downloading your .zip (portable version) from the [GitHub Releases](https://github.com/TcNobo/TcNo_Acc_Switcher/releases/tag/3.0.02) page, extract everything to a folder of your choice and run `TcNo Account Switcher.exe`
 
 > If [HardenTools](https://github.com/securitywithoutborders/hardentools) was used, ensure that cmd.exe (Command Prompt) access is still allowed; if access is denied, TcNo Account Switcher will encounter a fatal unhandled exception (crash).
 
@@ -119,12 +119,12 @@ on your computer.
 
 I am not responsible for the contents of external links.
 For the rest of the disclaimer, refer to the License (GNU General Public License v3.0) file:
-https://github.com/TcNobo/TcNo-Acc-Switcher/blob/master/LICENSE - See sections like 15, 16 and 17, as well as GitHub's
+https://github.com/TcNobo/TcNo_Acc_Switcher/blob/master/LICENSE - See sections like 15, 16 and 17, as well as GitHub's
 'simplification' at the top of the above website.
 
 ```
 
-Additional license information for included NuGet packages and other parts of code can be found in: [HERE](https://github.com/TcNobo/TcNo-Acc-Switcher/blob/master/TcNo-Acc-Switcher-Server/Additional%20Licenses.txt) `TcNo-Acc-Switcher-Server/Additional Licenses.txt`, and are copied to the build directory, as well as distributed with release versions of this software.
+Additional license information for included NuGet packages and other parts of code can be found in: [HERE](https://github.com/TcNobo/TcNo_Acc_Switcher/blob/master/TcNo_Acc_Switcher_Server/Additional%20Licenses.txt) `TcNo_Acc_Switcher_Server/Additional Licenses.txt`, and are copied to the build directory, as well as distributed with release versions of this software.
 
 <p align="center"><a target="_blank" align="center" href="https://www.jetbrains.com/?from=TcNo-Account-Switcher">
   <img alt="JetBrains Support - Open Source License" src="/other/img/JetBrains_Banner.png" height=70"></a></p>

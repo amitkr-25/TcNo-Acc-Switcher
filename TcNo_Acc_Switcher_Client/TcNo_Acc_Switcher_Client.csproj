@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>TcNo_Acc_Switcher_Client</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <Version>4.0.0</Version>
+    <Authors>TechNobo (Wesley Pyburn)</Authors>
+    <Product>TcNo Account Switcher</Product>
+    <Copyright>Copyright © TechNobo (Wesley Pyburn) 2019-2021</Copyright>
+    <PackageProjectUrl>https://github.com/TcNobo/TcNo_Acc_Switcher</PackageProjectUrl>
+    <PackageIcon>TcNoAccSw-Icon-100x100.png</PackageIcon>
+    <RepositoryUrl>https://github.com/TcNobo/TcNo_Acc_Switcher</RepositoryUrl>
+    <AssemblyName>TcNo_Acc_Switcher</AssemblyName>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <Platforms>AnyCPU;x64</Platforms>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.864.35" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TcNo_Acc_Switcher_Server\TcNo_Acc_Switcher_Server.csproj">
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+    </ProjectReference>
+    <ProjectReference Include="..\TcNo_Acc_Switcher_Tray\TcNo_Acc_Switcher_Tray.csproj" />
+    <ProjectReference Include="..\TcNo_Acc_Switcher_Updater\TcNo_Acc_Switcher_Updater.csproj">
+      <Private>true</Private>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="inc\TcNo_Acc_Switcher.runtimeconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\TcNo_Acc_Switcher_Server\wwwroot\img\TcNoAccSw-Icon-100x100.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call &quot;$(ProjectDir)\PostBuild.bat&quot;" IgnoreExitCode="true" />
+  </Target>
+
+</Project>

@@ -1,0 +1,141 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>TcNo_Acc_Switcher_Server</RootNamespace>
+    <ApplicationIcon>wwwroot\favicon.ico</ApplicationIcon>
+    <Version>4.0.0</Version>
+    <Authors>TechNobo (Wesley Pyburn)</Authors>
+    <Product>TcNo Account Switcher - Server</Product>
+    <Copyright>Copyright © TechNobo (Wesley Pyburn) 2020</Copyright>
+    <PackageProjectUrl>https://github.com/TcNobo/TcNo_Acc_Switcher</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TcNobo/TcNo_Acc_Switcher</RepositoryUrl>
+    <AssemblyName>TcNo_Acc_Switcher_Server</AssemblyName>
+    <Company>TechNobo (Wesley Pyburn)</Company>
+    <Description>Server for the TcNo Account Switcher (Blazor backend)</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\en-US.yml" />
+    <None Remove="TcNoAccSw-Icon-100x100.png" />
+    <None Remove="themes\Default.yaml" />
+    <None Remove="themes\Dracula_Cyan.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\site.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="themes\Default.yaml" />
+    <Content Include="themes\Dracula_Cyan.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\en-US.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AKSoftware.Localization.MultiLanguages" Version="5.1.0" />
+    <PackageReference Include="AKSoftware.Localization.MultiLanguages.Blazor" Version="1.0.0" />
+    <PackageReference Include="Gameloop.Vdf" Version="0.6.1" />
+    <PackageReference Include="Gameloop.Vdf.JsonConverter" Version="0.2.1" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.34" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="7.24.1" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="5.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Svg.Skia" Version="0.5.6.1" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+    <PackageReference Include="TaskScheduler" Version="2.9.1" />
+    <PackageReference Include="YamlDotNet" Version="11.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TcNo_Acc_Switcher_Globals\TcNo_Acc_Switcher_Globals.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TcNoAccSw-Icon-100x100.png" />
+    <Resource Include="wwwroot\img\TcNo_Logo_Flat.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\**\*.*">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <DeploymentContent>true</DeploymentContent>
+    </Content>
+    <Content Update="themes\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DeploymentContent>true</DeploymentContent>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Additional Licenses.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\css\font\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\js\ace\ace.js" />
+    <None Include="wwwroot\js\ace\ext-beautify.js" />
+    <None Include="wwwroot\js\ace\ext-code_lens.js" />
+    <None Include="wwwroot\js\ace\ext-elastic_tabstops_lite.js" />
+    <None Include="wwwroot\js\ace\ext-emmet.js" />
+    <None Include="wwwroot\js\ace\ext-error_marker.js" />
+    <None Include="wwwroot\js\ace\ext-keybinding_menu.js" />
+    <None Include="wwwroot\js\ace\ext-language_tools.js" />
+    <None Include="wwwroot\js\ace\ext-linking.js" />
+    <None Include="wwwroot\js\ace\ext-modelist.js" />
+    <None Include="wwwroot\js\ace\ext-options.js" />
+    <None Include="wwwroot\js\ace\ext-prompt.js" />
+    <None Include="wwwroot\js\ace\ext-rtl.js" />
+    <None Include="wwwroot\js\ace\ext-searchbox.js" />
+    <None Include="wwwroot\js\ace\ext-settings_menu.js" />
+    <None Include="wwwroot\js\ace\ext-spellcheck.js" />
+    <None Include="wwwroot\js\ace\ext-split.js" />
+    <None Include="wwwroot\js\ace\ext-static_highlight.js" />
+    <None Include="wwwroot\js\ace\ext-statusbar.js" />
+    <None Include="wwwroot\js\ace\ext-textarea.js" />
+    <None Include="wwwroot\js\ace\ext-themelist.js" />
+    <None Include="wwwroot\js\ace\ext-whitespace.js" />
+    <None Include="wwwroot\js\ace\keybinding-emacs.js" />
+    <None Include="wwwroot\js\ace\keybinding-sublime.js" />
+    <None Include="wwwroot\js\ace\keybinding-vim.js" />
+    <None Include="wwwroot\js\ace\keybinding-vscode.js" />
+    <None Include="wwwroot\js\ace\mode-autohotkey.js" />
+    <None Include="wwwroot\js\ace\mode-batchfile.js" />
+	<None Include="wwwroot\js\ace\mode-json.js" />
+    <None Include="wwwroot\js\ace\mode-text.js" />
+    <None Include="wwwroot\js\ace\snippets\autohotkey.js" />
+    <None Include="wwwroot\js\ace\snippets\batchfile.js" />
+    <None Include="wwwroot\js\ace\snippets\json.js" />
+    <None Include="wwwroot\js\ace\snippets\text.js" />
+    <None Include="wwwroot\js\ace\snippets\yaml.js" />
+    <None Include="wwwroot\js\ace\worker-base.js" />
+    <None Include="wwwroot\js\ace\worker-coffee.js" />
+    <None Include="wwwroot\js\ace\worker-css.js" />
+    <None Include="wwwroot\js\ace\worker-html.js" />
+    <None Include="wwwroot\js\ace\worker-javascript.js" />
+    <None Include="wwwroot\js\ace\worker-json.js" />
+    <None Include="wwwroot\js\ace\worker-lua.js" />
+    <None Include="wwwroot\js\ace\worker-php.js" />
+    <None Include="wwwroot\js\ace\worker-xml.js" />
+    <None Include="wwwroot\js\ace\worker-xquery.js" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES11</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+</Project>

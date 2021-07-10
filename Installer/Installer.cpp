@@ -299,14 +299,14 @@ int main()
         " - ASP.NET Core 5.0.7+." << endl <<
         " - Edge WebView2 Runtime 91.0+" << endl <<
         "------------------------------------------------------------------------" << endl << endl <<
-        "That should be everything. The main program, TcNo-Acc-Switcher.exe, will auto-run when you press a key to continue." << endl << endl <<
+        "That should be everything. The main program, TcNo_Acc_Switcher.exe, will auto-run when you press a key to continue." << endl << endl <<
         "If it doesn't work, please refer to install instructions, here:" << endl <<
-        "https://github.com/TcNobo/TcNo-Acc-Switcher#required-runtimes-download-and-install" << endl << endl;
+        "https://github.com/TcNobo/TcNo_Acc_Switcher#required-runtimes-download-and-install" << endl << endl;
 
     system("pause");
 	
 	// Launch main program:
-	string main_path = operating_path + "TcNo-Acc-Switcher.exe";
+	string main_path = operating_path + "TcNo_Acc_Switcher.exe";
 	STARTUPINFO si = { sizeof(STARTUPINFO) };
 	PROCESS_INFORMATION pi;
     CreateProcess(s2_ws(main_path).c_str(), nullptr, nullptr,
